@@ -1,0 +1,24 @@
+{
+  "name": "loopback-healthcheck-middleware",
+  "version": "0.0.1",
+  "description": "loopback middleware to install an endpoint for basic service health check",
+  "main": "healthcheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodpig07/loopback-healthcheck-middleware.git"
+  },
+  "keywords": [
+    "loopback",
+    "middleware",
+    "healthcheck"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woodpig07/loopback-healthcheck-middleware/issues"
+  },
+  "homepage": "https://github.com/woodpig07/loopback-healthcheck-middleware#readme"
+}
