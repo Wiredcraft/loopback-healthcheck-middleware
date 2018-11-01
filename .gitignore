@@ -1,6 +1,7 @@
 .*
 !.eslintignore
 !.eslintrc
+!.prettierrc
 !.gitignore
 !.npmignore
 !.jscsrc
