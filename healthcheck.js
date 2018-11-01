@@ -3,7 +3,7 @@
 const path = require('path');
 const defautOpts = {
   path: '/health',
-  versionFile: '../../../package.json'   // path relative to healthcheck.js
+  versionFile: '../../package.json' // path relative to healthcheck.js
 };
 
 module.exports = function(options) {
@@ -13,14 +13,14 @@ module.exports = function(options) {
   let version = 'unknown';
   try {
     const ver = require(verpath);
-    version = ver && ver.version || version;
+    version = (ver && ver.version) || version;
   } catch (e) {
     if (e.code !== 'MODULE_NOT_FOUND') {
       throw e;
     }
     console.log('Version file not found: ', verpath);
   }
-  
+
   return function healthcheck(req, res, next) {
     if (req.path === options.path) {
       res.send({
