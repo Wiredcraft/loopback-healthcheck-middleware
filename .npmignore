@@ -1,0 +1,9 @@
+.*
+!.npmignore
+
+*.orig
+*.lock
+logs
+*.log
+
+test/

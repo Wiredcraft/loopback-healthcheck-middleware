@@ -1,0 +1,15 @@
+language: node_js
+cache:
+  yarn: true
+notifications:
+  email: false
+branches:
+  only:
+    - master
+node_js:
+  - "6"
+install:
+  - yarn
+
+script:
+  - npm test

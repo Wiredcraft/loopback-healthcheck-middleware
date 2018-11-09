@@ -17,9 +17,7 @@ Add the middleware to your *middleware.json*:
 ```json
 {
   "routes:before": {
-    "loopback-healthcheck-middleware": {
-      "enabled": true
-    }
+    "loopback-healthcheck-middleware": {}
   }
 }
 ```
