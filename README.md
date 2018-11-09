@@ -6,7 +6,7 @@ Install
 =============
 
 ```bash
-  npm install woodpig07/loopback-healthcheck-middleware --save
+  npm install loopback-healthcheck-middleware --save
 ```
 
 How to use
@@ -17,9 +17,7 @@ Add the middleware to your *middleware.json*:
 ```json
 {
   "routes:before": {
-    "loopback-healthcheck-middleware": {
-      "enabled": true
-    }
+    "loopback-healthcheck-middleware": {}
   }
 }
 ```
