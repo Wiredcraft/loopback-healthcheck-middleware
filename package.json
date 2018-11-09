@@ -1,6 +1,6 @@
 {
   "name": "loopback-healthcheck-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "loopback middleware to install an endpoint for basic service health check",
   "main": "healthcheck.js",
   "engines": {
