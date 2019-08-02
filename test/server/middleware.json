@@ -3,8 +3,7 @@
     "../../healthcheck": {
       "params": {
         "versionFile": "./test/version.json"
-      },
-      "enabled": true
+      }
     }
   }
 }

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha test/*.test.js -b --timeout 30000 --reporter spec",
+    "test": "TEST_VAR_1=11 TEST_VAR_2=22 mocha test/*.test.js -b --timeout 30000 --reporter spec",
     "precommit": "eslint . --fix"
   },
   "repository": {
@@ -34,8 +34,10 @@
     "loopback": "^3.23.2",
     "loopback-boot": "^2.27.1",
     "mocha": "^5.2.0",
-    "nodemon": "^1.17.3",
     "prettier": "^1.14.3",
     "supertest": "^3.3.0"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }

@@ -18,6 +18,7 @@ describe('healthcheck', function() {
           assert(res.body.started);
           assert(res.body.uptime);
           assert.equal(res.body.version, 'x.x.1');
+          assert.strictEqual(res.body.env, undefined);
           done();
         });
     });
@@ -25,10 +26,14 @@ describe('healthcheck', function() {
   it('should install route passed in params when registered via API', function(done) {
     const app2 = loopback();
     app2.middleware(
-      'routes',
+      'routes:before',
       healthcheck({
         path: '/test',
-        versionFile: './package.json'
+        versionFile: './package.json',
+        env: {
+          var1: 'TEST_VAR_1',
+          var2: 'TEST_VAR_2'
+        }
       })
     );
     boot(app2, __dirname, function() {
@@ -39,7 +44,8 @@ describe('healthcheck', function() {
           if (err) throw err;
           assert(res.body.started);
           assert(res.body.uptime);
-          assert.equal(res.body.version, '0.0.1');
+          assert(res.body.version);
+          assert.deepStrictEqual(res.body.env, { var1: '11', var2: '22' });
           done();
         });
     });
